@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;700&display=swap');
+
+:root{
+    --background: #FFF; 
+    --primary: #77b6b1;
+    --primary-lighten: #91ccc7;
+    --primary-darken: #2c3f50;
+    --secondary: #eca349; 
+    --secondary-lighten: #dd5d26;
+}
+
+
+*{
+    box-sizing: border-box;
+    border:none;
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    outline: none;
+    padding:0;
+    transition: all .2s linear;
+    -webkit-transition: all .2s line;
+    -moz-transition: all .2s line;
+    -ms-transition: all .2s line;
+    -o-transition: all .2s line;
+}
+
+*::selection{
+    background-color: var(--primary);
+    color: var(--primary-darken);
+}
+
+html{   
+    font-size: 62.5%;
+    scroll-behavior: smooth; 
+}
+
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--background)
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--primary)
+} 
+
+body{
+    background-color: var(--background);
+    padding-left: 38rem;
+    color: var(--primary-darken);
+}
+
+section{
+    min-height: 100vh;
+}
+
+
+/* Modo claro/oscuro */
+
+.btn-dark-container{
+    display:flex;
+    justify-content:center;
+    margin-top: 1rem;
+}
+.dark-theme-btn{
+    background-color:var(--primary);
+    color: var(--primary-darken);
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    font-size:2rem;
+    font-weight:bold;
+    position:fixed;
+    z-index:999;
+    outline:0;
+    width:4rem;
+    height:4rem;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+.dark-theme-btn:hover{
+    background-color:var(--primary-darken);
+    color:var(--primary);
+}
+
+.dark-mode{
+    background-color:var(--primary-darken);
+    color:var(--background);
+}
+
+/* Header */
+
+header{
+    background:var(--background);
+    border-right: .8rem dashed var(--secondary);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+    height:100%;
+    width:35rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+
+}
+header .user{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+}
+header .user img{
+    height:17rem;
+    width:17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border:.7rem solid var(--primary);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+}
+
+header .user .post{
+    font-size: 2rem;
+}
+
+header .navbar{
+    width:100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding:1rem 3rem;
+}
+
+
+header .navbar ul li a{
+    border-radius: 5rem;
+    font-size: 2rem;
+    display: block;
+    padding:1rem;
+    margin:1.5rem 0;
+    text-decoration: none;
+}
+
+/* Menú */
+
+.menu{
+    color:var(--background);
+    background-color: var(--secondary);
+    border: .4rem dashed var(--background);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    cursor: pointer;
+    display:none;
+    font-size:2.5rem;
+    padding: 1rem 1.5rem;
+    position:fixed;
+    right:2rem;
+    top:2em;
+    padding: 1rem 1.5rem;
+    z-index:1000;
+
+}
+
+.menu-dark{
+    border: .4rem dashed var(--primary-darken);
+    color:var(--primary-darken);
+}
+
+.toggle{
+    left:0%; 
+}
+
+
+/* BOTONES */
+
+.btn{
+    background:var(--primary);
+    color: var(--primary-darken); 
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding:.7rem 3rem;
+    border-radius: 5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background:var(--secondary);
+    color:var(--background)
+}
+
+/* Sección INICIO */
+
+.inicio, .educacion, .conocimientos{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding:0 15rem;
+}
+
+.inicio h1{
+    font-size:3.5rem;
+    font-weight:bold;
+
+}
+
+.inicio p{
+    font-size:2rem;
+    padding: 3rem 0;
+}
+
+/* Sección CONOCIMIENTOS */
+
+.conocimientos h1, .educacion h1, .portfolio h1, .contacto h1{
+    color: var(--secondary);
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+.conocimientos  .info h3{
+    font-size: 2rem;
+    color:var(--yellow);
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.conocimientos .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top:3rem;
+    align-items: center;
+}
+
+.conocimientos  .box-container .box{
+    width:20rem;
+    background:var(--secondary);
+    text-align: center;
+    padding: 2rem;
+    margin:2rem;
+    border-start-end-radius: 2rem;
+    border-start-start-radius: 2rem;
+}
+
+.conocimientos .box-container .box:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    background-color: var(--primary);
+}
+
+.conocimientos .box-container .box h3{
+    font-size: 2rem;
+    color:#fff;
+}
+
+
+/* Sección EDUCACIÓN */
+
+
+.educacion .box-container{
+    margin-top:3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    padding:1rem 0;
+}
+
+.educacion .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid var(--secondary);
+    position: relative;
+}
+
+.educacion .box-container .box span{
+    font-size: 1.8rem;
+    background:var(--secondary);
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+    font-weight: bold;
+}
+
+.educacion .box-container .box h3{
+    font-size: 2.1rem;
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.educacion .box-container .box p{
+    font-size: 1.6rem;
+    padding: .4rem 0;
+    list-style: none;
+}
+
+.educacion .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    background:var(--primary);
+}
+
+/* Sección PORTFOLIO */
+
+.portfolio .box-container{
+
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.portfolio .box{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:70rem;
+    height:70rem;
+}
+
+.portfolio .box img{
+    width: 100%
+}
+
+.portfolio .box h4, p{
+    font-size: 2.5rem;
+    width:90%;
+}
+
+.portfolio .box p{
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+}
+
+.portfolio .box .sub-box{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin:0px;
+    width:90%;
+    align-items: center;
+    border: .5rem dashed var(--secondary);
+    border-bottom: none;
+    border-start-end-radius: 2rem;
+    border-start-start-radius: 2rem;
+}
+
+.portfolio .box .box-enlaces{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: row;
+    width: 90%;
+    bottom: 0;
+    padding: 1rem 0rem 2rem 0rem;
+    background-color: transparent;
+    border: 0.5rem dashed var(--secondary)
+}
+
+/* Sección CONTACTO */
+
+.contacto{
+    padding:3rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    flex-direction: column;
+}
+
+.contacto h5{
+    font-weight:normal;
+    margin-bottom: 2rem;
+}
+
+.contacto .info-contact{
+    margin-top:4rem;
+}
+
+.contacto a{
+    text-decoration: none;
+}
+
+.contacto a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
+
+/* RESPONSIVE */
+
+@media (max-width:1500px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width:991px){
+
+    header{
+        left:-120%;
+    }
+ 
+    #menu{
+        display: block;
+    }
+ 
+    header.toggle{
+     left:0%;
+    }
+ 
+    body{
+        padding:0;
+    }
+ }
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .conocimientos{
+        padding:0rem 1rem;
+    }
+}
+
+@media (max-width:450px){
+    .inicio{
+        padding:0rem 4rem;
+    }
+    header{
+        width: 100vw;
+        border-right: none;
+    }
+    .heading{
+        margin:0 3rem;
+    }
+    .conocimientos{
+        padding:0rem 2rem;
+        margin-bottom: 20rem;
+    }
+    .conocimientos .row .box-container .box{
+        width: 80%;
+    }
+    .conocimientos .row .box-container .box:hover{
+        transform:none; 
+        -webkit-transform:none ;
+        -moz-transform:none ;
+        -ms-transform:none ;
+        -o-transform:none ;
+}
+    .educacion{
+        padding:0rem 5rem;
+        margin-bottom: 20rem;
+    }
+    .educacion .box-container .box{
+        width:100%;
+    }
+
+    .portfolio{
+        padding:0rem 2rem;
+    }
+
+    .portfolio .box-container .box{
+        width:100%;
+    }
+    .portfolio .box{
+        height:55rem;
+    }
+
+    .contacto{
+        font-size:2.4rem;
+    }
+
+ }
